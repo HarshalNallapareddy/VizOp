@@ -1,0 +1,158 @@
+.left-sidebar {
+    flex: 1;
+    background-color: #282c34;
+    /* background-color: #bbcdf1; */
+    color: white;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#ticker{
+    /* margin-bottom: 20px; */
+    margin-top: 20px;
+}
+
+.ticker-label-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.ticker-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.side-container {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.left-sidebar label {
+    color: white;
+    font-size: 1.2em;
+    display: block;
+}
+
+.left-sidebar input[type="text"] {
+    border: 1px solid white;
+    background-color: #444;
+    color: white;
+    width: 80%;
+}
+
+.call-button {
+    flex: 1;
+    border: 1px solid white;
+    background-color: rgb(119, 159, 119);
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    align-items: left;
+    border-radius: 12px;
+}
+.call-button:hover {
+    background-color: #85d185; /* Green */
+}
+
+.put-button {
+    flex: 1;
+    border: 1px solid white;
+    background-color: #bb7979; /* Red */
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+    border-radius: 12px;
+}
+.put-button:hover {
+    background-color: #ff6666; /* Red */
+}
+
+.submit-button {
+    border: 1px solid white;
+    background-color: #444; /* This should be lighter than the rest of your page */
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+}
+
+.submit-button:hover {
+    background-color: #666; /* This is for a hover effect, you can adjust as needed */
+}
+
+.exp-strike-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 5px;
+}
+
+.expiration-container, .strike-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.load-graph-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    /* border-radius: 12px; */
+}
+
+.load-graph-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: 1px solid white;
+    font-size: 1.5em;
+    background-color: #444; /* This should be lighter than the rest of your page */
+    color: white;
+    padding: 10px 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* border-radius: 12px; */
+}
+
+.load-graph-button:hover {
+    background-color: #665; /* This is for a hover effect, you can adjust as needed */
+}
+
+#expiration-label {
+    color: black;
+    font-size: 1.2em;
+}
+
+#load-chain {
+    /* margin-bottom: 20px; */
+    margin-top: 20px;
+}
+
+#expiration-dropdown {
+    border: 1px solid lightgray;
+    background-color: white;
+    color: black;
+    margin: 10px;
+    width: 100%;
+}
+
+#strike-label {
+    color: black;
+    font-size: 1.2em;
+}
+
+#strike-dropdown {
+    border: 1px solid lightgray;
+    background-color: white;
+    color: black;
+    margin: 10px;
+    width: 100%;
+}
