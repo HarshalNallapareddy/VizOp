@@ -1,0 +1,18 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "api/**/*.py",
+        "use": "@vercel/python"
+      },
+      {
+        "src": "next.config.js",
+        "use": "@vercel/next"
+      }
+    ],
+    "functions": {
+      "api/**/*.py": {
+        "runtime": "python3.10"
+      }
+    }
+  }
