@@ -2,7 +2,7 @@
     "version": 2,
     "routes": [
       { "handle": "filesystem" },
-      { "src": "/api/(.*)", "dest": "/api/app.py" },
+      { "src": "/api/help", "dest": "/api/help.html" },
       { "src": "/(.*)", "dest": "/" }
     ]
   }
