@@ -1,6 +1,7 @@
 {
     "version": 2,
-    "rewrites": [
+    "routes": [
+      { "handle": "filesystem" },
       { "src": "/api/(.*)", "dest": "/api/app.py" },
       { "src": "/(.*)", "dest": "/" }
     ]
