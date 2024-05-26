@@ -3,7 +3,7 @@ from api.private import get_options_chain, options_algo
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/index')
 def hello():
     return "Hello World!"
 
