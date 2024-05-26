@@ -1,7 +1,6 @@
 {
     "version": 2,
     "rewrites": [
-      { "handle": "filesystem" },
       { "src": "/api/(.*)", "dest": "/api/app.py" },
       { "src": "/(.*)", "dest": "/" }
     ]
