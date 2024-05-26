@@ -3,6 +3,10 @@ from api.private import get_options_chain, options_algo
 
 app = Flask(__name__)
 
+@app.route('/')
+def hello():
+    return "Hello World!"
+
 @app.route('/api/get_expirations', methods=['POST'])
 def get_expirations():
     # data = request.json
