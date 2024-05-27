@@ -10,6 +10,7 @@ yfinance = "0.2.1"
 pandas = "1.5.2"
 requests = "2.31.0"
 fastapi = "*"
+sdafsasdasdasddf = "*"
 
 [dev-packages]
 
