@@ -1,3 +1,4 @@
+import numpy as np
 from fastapi import FastAPI, Request
 from api.private import get_options_chain, options_algo
 
