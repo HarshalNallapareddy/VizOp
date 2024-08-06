@@ -21,7 +21,7 @@ function LeftSidebar({setGraphData}) {
   const handleExpirationChange = (event) => {
     setExpiration(event.target.value);
     fetch('/api/get_strikes', {
-      method: 'POST',
+      method: 'GET',
       headers: {
         'Content-Type': 'application/json',
       },
@@ -49,7 +49,7 @@ function LeftSidebar({setGraphData}) {
   const handleLoadGraphClick = () => {
     if (ticker && optionType && expiration && strike) {
       fetch('/api/get_graph_data', {
-      method: 'POST',
+      method: 'GET',
       headers: {
           'Content-Type': 'application/json',
       },
@@ -73,7 +73,7 @@ function LeftSidebar({setGraphData}) {
 
   const handleLoadChainClick = () => {
     fetch('/api/get_expirations', {
-      method: 'POST',
+      method: 'GET',
       headers: {
         'Content-Type': 'application/json',
       },
