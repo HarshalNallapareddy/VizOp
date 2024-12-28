@@ -38,7 +38,6 @@ __pycache__/
 *.py[cod]
 
 # Docker
-Dockerfile*
 docker-compose*
 .dockerignore
 
