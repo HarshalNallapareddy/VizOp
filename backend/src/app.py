@@ -19,10 +19,6 @@ app.add_middleware(
 def hello():
     return {"message": "Hello World"}
 
-@app.post("/api/echo/")
-async def echo_message(message: str):
-    return {"message": message}
-
 @app.post('/api/get_expirations')
 async def get_expirations(request: Request):
     data = await request.json()
