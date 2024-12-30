@@ -102,47 +102,50 @@ function LeftSidebar({setGraphData}) {
   }, [ticker, optionType, expiration, strike]);
 
   return (
-    
-    <div className={styles['left-sidebar']}>
-
-      <h1 data-bs-toggle="tooltip" data-bs-placement="top" title="Visualize stock options with VizOp" className ={`display-6' ${styles['centered-title']}`} style={{ color: 'lightblue' }}>
+    <div className={`container ${styles['left-sidebar']}`}>
+      <h1 data-bs-toggle="tooltip" data-bs-placement="top" title="Visualize stock options with VizOp" className={`display-6 text-center ${styles['centered-title']}`} style={{ color: 'lightblue' }}>
         Viz<span style={{ color: 'orange' }}>Op</span>
       </h1>
 
-      <div className={styles['ticker-container']}>
-        <div className={styles['ticker-label-container']}>
-          <input type="text" id={styles['ticker']} name="ticker" placeholder="Enter ticker" onChange={handleTickerChange}/>
-          <button className={styles['submit-button']} id ={styles['load-chain']} onClick={handleLoadChainClick}>Load Chain</button>
+      <div className="row">
+        <div className="col-md-6">
+          <div className={`input-group mb-3 ${styles['ticker-container']}`}>
+            <input type="text" className="form-control" id={styles['ticker']} name="ticker" placeholder="Enter ticker" onChange={handleTickerChange}/>
+            <button className={`btn btn-primary ${styles['submit-button']}`} id={styles['load-chain']} onClick={handleLoadChainClick}>Load Chain</button>
+          </div>
         </div>
 
-        <div className={styles['side-container']}>
-          <button data-bs-toggle="tooltip" data-bs-placement="top" title="Purchase stock at strike price by expiration date" className={styles['call-button']} onClick={() => handleOptionTypeChange('call')}>Call</button>
-          <button data-toggle="tooltip" data-placement="top" title="Sell stock at strike price by expiration date" className={styles['put-button']} onClick={() => handleOptionTypeChange('put')}>Put</button>
+        <div className="col-md-6">
+          <div className={`btn-group ${styles['side-container']}`} role="group">
+            <button type="button" className="btn btn-outline-success" data-bs-toggle="tooltip" data-bs-placement="top" title="Purchase stock at strike price by expiration date" onClick={() => handleOptionTypeChange('call')}>Call</button>
+            <button type="button" className="btn btn-outline-danger" data-bs-toggle="tooltip" data-bs-placement="top" title="Sell stock at strike price by expiration date" onClick={() => handleOptionTypeChange('put')}>Put</button>
+          </div>
         </div>
       </div>
 
-      <div className={styles['exp-strike-container']}>
-
-        <div className={styles['expiration-container']}>
-          <label id={styles['expiration-label']} className="display-3">Expiration</label>
-          <select className = "form-select" aria-label="Default select example" id={styles['expiration-dropdown']} name="expiration" onChange={handleExpirationChange}>
-            {expirations.map((expiration, index) => <option key={index} value={expiration}>{expiration}</option>)}
-          </select>
+      <div className="row mt-3">
+        <div className="col-md-6">
+          <div className={styles['expiration-container']}>
+            <label id={styles['expiration-label']} className="form-label">Expiration</label>
+            <select className="form-select" aria-label="Default select example" id={styles['expiration-dropdown']} name="expiration" onChange={handleExpirationChange}>
+              {expirations.map((expiration, index) => <option key={index} value={expiration}>{expiration}</option>)}
+            </select>
+          </div>
         </div>
 
-        <div className={styles['strike-container']}>
-          <label id={styles['strike-label']} className="display-3">Strike</label>
-          <select className = "form-select" aria-label="Default select example" id={styles['strike-dropdown']} name="strike" onChange={handleStrikeChange}>
-            {strikes.map((strike, index) => <option key={index} value={strike}>{strike}</option>)}
-          </select>
+        <div className="col-md-6">
+          <div className={styles['strike-container']}>
+            <label id={styles['strike-label']} className="form-label">Strike</label>
+            <select className="form-select" aria-label="Default select example" id={styles['strike-dropdown']} name="strike" onChange={handleStrikeChange}>
+              {strikes.map((strike, index) => <option key={index} value={strike}>{strike}</option>)}
+            </select>
+          </div>
         </div>
-
       </div>
 
-      <div className={styles['load-graph-container']}>
-        <h2><button type = "button" className={styles['load-graph-button']} onClick={handleLoadGraphClick}>Load Graph</button></h2>
+      <div className="text-center mt-4">
+        <button type="button" className={`btn btn-info ${styles['load-graph-button']}`} onClick={handleLoadGraphClick}>Load Graph</button>
       </div>
-
     </div>
   );
 }

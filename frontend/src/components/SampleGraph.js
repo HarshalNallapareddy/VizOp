@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from 'react';
-// import Plot from 'react-plotly.js';
+import React from 'react';
 import dynamic from 'next/dynamic';
 
 const Plot = dynamic(() => import('react-plotly.js'), { ssr: false });
 
 class SampleGraph extends React.Component {
   render() {
-
     const { graphData } = this.props;
 
     const data = [{
@@ -17,32 +15,32 @@ class SampleGraph extends React.Component {
       mode: 'markers',
       marker: {
         size: 5,
-        color: graphData.premium || [], // Use the premium array for marker color
+        color: graphData.premium || [],
         colorbar: {title: 'Premium'},
       },
-      hoverinfo: 'text', // Set the hoverinfo to 'text'
-      text: (graphData.premium || []).map((p, i) => `Days from today: ${graphData.time[i]}<br>Stock Price: ${graphData.price[i].toFixed(2)}<br>Premium: ${p.toFixed(2)}`), // Set the text that appears when you hover over a marker
+      hoverinfo: 'text',
+      text: (graphData.premium || []).map((p, i) => `Days from today: ${graphData.time[i]}<br>Stock Price: ${graphData.price[i].toFixed(2)}<br>Premium: ${p.toFixed(2)}`),
     }];
 
     const layout = {
       autosize: true,
       scene: {
         bgcolor: 'white',
-        xaxis: {title: 'Days from today'}, // Add title to x-axis
-        yaxis: {title: 'Stock Price'}, // Add title to y-axis
-        zaxis: {title: 'Premium'}, // Add title to z-axis
-        aspectmode: 'cube', // Set the aspect mode to 'cube'
-        aspectratio: {x: 1, y: 1, z: 1}, // Set the aspect ratio to 1:1:1
+        xaxis: {title: 'Days from today'},
+        yaxis: {title: 'Stock Price'},
+        zaxis: {title: 'Premium'},
+        aspectmode: 'cube',
+        aspectratio: {x: 1, y: 1, z: 1},
       }
-      
     };
 
     return (
-      <div className="sample-graph" id="words" style={{height: '100%'}}>
+      <div className="sample-graph" style={{ width: '100%', height: '100%' }}>
         <Plot
           data={data}
           layout={layout}
-          style={{ width: '100%', height: '100%'}}
+          useResizeHandler={true}
+          style={{ width: '100%', height: '100%' }}
         />
       </div>
     );
