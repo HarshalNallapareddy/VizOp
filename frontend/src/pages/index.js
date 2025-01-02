@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import LeftSidebar from '../components/LeftSidebar';
 import SampleGraph from '../components/SampleGraph';
+import 'bootstrap/dist/css/bootstrap.css';
 
 export default function Home() {
   const [graphData, setGraphData] = useState({});
