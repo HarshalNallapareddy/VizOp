@@ -1,5 +1,5 @@
 .left-sidebar {
-    background-color: #343a40;
+    background-color: #343a40;/* Light background */
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 20%; /* Set a fixed width */
@@ -8,6 +8,7 @@
 
 .centered-title {
     margin-bottom: 20px;
+    color: #f8f9fa; /* Light text color */
 }
 
 .input-group, .btn-group, .form-select, .btn {
@@ -19,6 +20,9 @@
 }
 
 .btn-outline-success, .btn-outline-danger {
+    background-color: #f8f9fa; /* Light background */
+    color: #343a40; /* Dark text color */
+    border: none;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
