@@ -107,30 +107,30 @@ function LeftSidebar({ setGraphData }) {
       </h1>
 
       <div className="mb-3">
-        <input
-          type="text"
-          className="form-control"
-          id={styles['ticker']}
-          name="ticker"
-          placeholder="Enter ticker"
-          onChange={handleTickerChange}
-        />
-        <button className={`btn btn-primary mt-2 ${styles['submit-button']}`} onClick={handleLoadChainClick}>
-          Load Chain
-        </button>
+        <div className="input-group">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Enter ticker"
+            onChange={handleTickerChange}
+          />
+          <button className="btn btn-primary" onClick={handleLoadChainClick}>
+            Load Chain
+          </button>
+        </div>
       </div>
 
-      <div className="btn-group mb-3" role="group">
+      <div className="mb-3 d-flex justify-content-between">
         <button
           type="button"
-          className="btn btn-outline-success"
+          className="btn btn-outline-success flex-fill me-1"
           onClick={() => handleOptionTypeChange('call')}
         >
           Call
         </button>
         <button
           type="button"
-          className="btn btn-outline-danger"
+          className="btn btn-outline-danger flex-fill ms-1"
           onClick={() => handleOptionTypeChange('put')}
         >
           Put
@@ -159,7 +159,7 @@ function LeftSidebar({ setGraphData }) {
         </select>
       </div>
 
-      <button className={`btn btn-info ${styles['load-graph-button']}`} onClick={handleLoadGraphClick}>
+      <button className="btn btn-info w-100" onClick={handleLoadGraphClick}>
         Load Graph
       </button>
     </div>
