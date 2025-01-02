@@ -138,7 +138,7 @@ function LeftSidebar({ setGraphData }) {
       </div>
 
       <div className="mb-3">
-        <label className="form-label">Expiration</label>
+        <label className="form-label" style={{ color: 'white' }}>Expiration</label>
         <select className="form-select" onChange={handleExpirationChange}>
           {expirations.map((expiration, index) => (
             <option key={index} value={expiration}>
@@ -149,7 +149,7 @@ function LeftSidebar({ setGraphData }) {
       </div>
 
       <div className="mb-3">
-        <label className="form-label">Strike</label>
+        <label className="form-label" style={{ color: 'white' }}>Strike</label>
         <select className="form-select" onChange={handleStrikeChange}>
           {strikes.map((strike, index) => (
             <option key={index} value={strike}>
