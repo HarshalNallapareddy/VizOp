@@ -35,3 +35,13 @@
     background-color: #dc3545;
     color: white;
 }
+
+.btn-info {
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+}
+
+.btn-info:hover {
+    background-color: #138496;
+}
