@@ -8,7 +8,7 @@ export default function Home() {
 
   return (
     <div className="App-container" >
-      <main className='App-body'>
+      <main className="App-body d-flex">
         <LeftSidebar setGraphData={setGraphData}/>
         <div style={{ flex: 1, overflow: 'auto'}}>
           <SampleGraph graphData={graphData} />

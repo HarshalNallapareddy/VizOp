@@ -1,8 +1,9 @@
 .left-sidebar {
-    background-color: #f8f9fa; /* Light background */
+    background-color: #343a40;
     padding: 20px;
-    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 20%; /* Set a fixed width */
+    flex-shrink: 0; /* Prevent shrinking */
 }
 
 .centered-title {
