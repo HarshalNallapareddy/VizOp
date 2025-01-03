@@ -102,8 +102,8 @@ function LeftSidebar({ setGraphData }) {
 
   return (
     <div className={`container ${styles['left-sidebar']}`}>
-      <h1 className={`display-6 text-center ${styles['centered-title']}`} style={{ color: 'lightblue' }}>
-        Viz<span style={{ color: 'orange' }}>Op</span>
+      <h1 className={`display-6 text-center ${styles['centered-title']}`} style={{ color: '#1B03A3' }}>
+        Viz<span style={{ color: '#FF5F1F' }}>Op</span>
       </h1>
 
       <div className="mb-3">
