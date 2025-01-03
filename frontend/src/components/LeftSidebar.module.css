@@ -1,5 +1,5 @@
 .left-sidebar {
-    background-color: #343a40;/* Light background */
+    background-color: #60666b;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 20%; /* Set a fixed width */
@@ -34,14 +34,4 @@
 .btn-outline-danger:hover {
     background-color: #dc3545;
     color: white;
-}
-
-.btn-info {
-    background-color: #17a2b8;
-    color: white;
-    border: none;
-}
-
-.btn-info:hover {
-    background-color: #138496;
 }
