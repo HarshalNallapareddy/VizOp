@@ -123,14 +123,14 @@ function LeftSidebar({ setGraphData }) {
       <div className="mb-3 d-flex justify-content-between">
         <button
           type="button"
-          className="btn btn-outline-success flex-fill me-1"
+          className="btn btn-success flex-fill me-1"
           onClick={() => handleOptionTypeChange('call')}
         >
           Call
         </button>
         <button
           type="button"
-          className="btn btn-outline-danger flex-fill ms-1"
+          className="btn btn-danger flex-fill ms-1"
           onClick={() => handleOptionTypeChange('put')}
         >
           Put
