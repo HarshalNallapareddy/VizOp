@@ -17,7 +17,7 @@ app.add_middleware(
 
 @app.get('/api/test')
 def hello():
-    return {"message": "Hello World!!!"}
+    return {"message": os.environ.get("MARKET_DATA_API_KEY", "default")}
 
 @app.post('/api/get_expirations')
 async def get_expirations(request: Request):
