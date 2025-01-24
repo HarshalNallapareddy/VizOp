@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './LeftSidebar.module.css';
+import { NEXT_PUBLIC_BACKEND_API_BASE_URL } from '../constants.tsx';
 
 function LeftSidebar({ setGraphData }) {
   const [ticker, setTicker] = useState('');
@@ -9,7 +10,7 @@ function LeftSidebar({ setGraphData }) {
   const [expirations, setExpirations] = useState([]);
   const [strikes, setStrikes] = useState([]);
 
-  const NEXT_PUBLIC_BACKEND_API_BASE_URL = 'https://vizop-backend-ndoiwo4fia-uc.a.run.app';
+  // const NEXT_PUBLIC_BACKEND_API_BASE_URL = 'https://vizop-backend-ndoiwo4fia-uc.a.run.app';
 
   const handleTickerChange = (event) => {
     setTicker(event.target.value);

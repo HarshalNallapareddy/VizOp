@@ -6,7 +6,7 @@ VizOp is an interactive options tool that visualizes the price of an options con
 
 ## Frontend
 
-The VizOp frontend is built using React and Next.js, providing a responsive and interactive user interface. It features real-time data visualization, intuitive controls for adjusting options parameters, and dynamic charts that update instantly. The frontend communicates with the backend API to fetch market data and perform complex calculations, presenting the results in an easily digestible format for users.
+The VizOp frontend is built using Next.js, providing a responsive and interactive user interface. It features real-time data visualization, intuitive controls for adjusting options parameters, and dynamic charts that update instantly. The frontend communicates with the backend API to fetch market data and perform complex calculations, presenting the results in an easily digestible format for users.
 
 ## Backend
 
