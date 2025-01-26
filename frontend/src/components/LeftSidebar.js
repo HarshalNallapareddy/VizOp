@@ -4,7 +4,7 @@ import { NEXT_PUBLIC_BACKEND_API_BASE_URL } from '../constants.tsx';
 
 function LeftSidebar({ setGraphData }) {
   const [ticker, setTicker] = useState('');
-  const [optionType, setOptionType] = useState('');
+  const [optionType, setOptionType] = useState('call');
   const [expiration, setExpiration] = useState('');
   const [strike, setStrike] = useState('');
   const [expirations, setExpirations] = useState([]);
@@ -124,14 +124,18 @@ function LeftSidebar({ setGraphData }) {
       <div className="mb-3 d-flex justify-content-between">
         <button
           type="button"
-          className="btn btn-success flex-fill me-1"
+          className={`btn flex-fill me-1 ${
+            optionType === 'call' ? 'btn-success' : 'btn-outline-success'
+          }`}
           onClick={() => handleOptionTypeChange('call')}
         >
           Call
         </button>
         <button
           type="button"
-          className="btn btn-danger flex-fill ms-1"
+          className={`btn flex-fill ms-1 ${
+            optionType === 'put' ? 'btn-danger' : 'btn-outline-danger'
+          }`}
           onClick={() => handleOptionTypeChange('put')}
         >
           Put
